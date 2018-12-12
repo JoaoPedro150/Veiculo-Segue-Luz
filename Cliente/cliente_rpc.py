@@ -9,9 +9,9 @@ class Cliente:
         self.__crypt = crypt.Crypt(key.KEY)
     
     def __send(self, movimento):
-        return requests.post('http://%s:%d' % 
+        return True if requests.post('http://%s:%d' % 
         (self.__server_addr[0], self.__server_addr[1]), 
-        data=self.__crypt.criptografar(json.dumps({'op': movimento}))).text
+        data=self.__crypt.criptografar(json.dumps({'op': movimento}))).status_code == 200 else False
 
     def iniciar(self):
         return self.__send('conect')
