@@ -1,3 +1,4 @@
+// Ultrasonic - Version: 3.0.0
 #include <Ultrasonic.h>
 #include <AFMotor.h>
 
@@ -60,7 +61,7 @@ void loop() {
     move_esq(movimento);
   else if (movimento == "F")
     move_frente(movimento);
-  else if (seq < 5 && (analogRead(ldr_esq) < 800 || analogRead(ldr_dir) < 800) && seguir_luz) {
+  else if (seq < 5 && (analogRead(ldr_esq) < 600 || analogRead(ldr_dir) < 600) && seguir_luz) {
     
       diferenca = 12 * (analogRead(ldr_esq) - analogRead(ldr_dir)) / 100;
     
@@ -71,8 +72,9 @@ void loop() {
       else
         move("S", FORWARD, FORWARD, 210, 220);
     }
-  else if (ultimo_movimento == "S")
+  else if (ultimo_movimento == "S") {
       parar();
+  }
         
   if (ultrasonic.read() < distMin) {
     seq += 1;
@@ -80,9 +82,12 @@ void loop() {
     if (seq > 5) {
     digitalWrite(ledUltrassonic, HIGH);
     
-      if (ultimo_movimento == "F" || ultimo_movimento == "S") {
+      if (ultimo_movimento == "F")
         parar();
-        return 0;
+      else if (ultimo_movimento == "S" && seguir_luz) {
+        move_dir("S");
+        delay(300);
+        parar();
       }
     }
   }
@@ -98,7 +103,7 @@ String ler_bluetooth() {
    String mensagem;
 
    while(Serial3.available()){
-
+     
      digitalWrite(ledMsg, HIGH);
 
      char c = Serial3.read();
@@ -130,7 +135,7 @@ void virar(String movimento, int mov_dir, int mov_esq, int speed_dir, int speed_
 }
 
 void move_frente(String movimento) {
-  move(movimento, FORWARD, FORWARD, 210, 240);
+  move(movimento, FORWARD, FORWARD, 210, 212);
 }
 
 void move_tras(String movimento) {
