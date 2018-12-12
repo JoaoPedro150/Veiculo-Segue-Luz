@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Veículo Segue Luz</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
+        <link rel="stylesheet" type="text/css" media="screen" href="css/materialize.min.css" />
+        
+    </head>
+    <body>
+        <header>
+            <div class="navbar-fixed">
+                <nav>
+                    <div class="nav-wrapper ">
+                    <a href="#" class="brand-logo margemE">Veículo Segue Luz</a>
+                    <ul id="nav-mobile" class="right hide-on-med-and-down">
+                        <li><a href="#sobre" class="links">Sobre</a></li>
+                        <li><a href="#utilizacao" class="links">Utilização</a></li>
+                        <li><a href="#github" class="links margemD">GitHub</a></li>
+                    </ul>
+                    </div>
+                </nav>
+            </div>
+        
+        </header>
+        
+        <main class="main">
+            <div class="container">
+
+                <section id="sobre">
+                        <div class="row">
+                            <div class="col s12">
+                                <h2 class="titulo">O Projeto</h2>
+                                <p>Projeto desenvolvido para a disciplina Sistemas distribuídos.<br>
+                                O Veículo Segue Luz é um tricíclo semiautônomo que pode ser controlado por servidor.<br>
+                                    A conexão se faz através de um Middleware que irá se conectar ao módulo Bluetooth
+                                    que está no triciclo.
+                                O Veículo também pode ser controlado por feixes de luz.</p>
+                            </div>
+                </section>
+
+                <section id="utilizacao">
+                        <div class="row">
+                            <div class="col s12">
+                                <h2 class="titulo">Utilização</h2>
+                                <p class="subtitulo">Protótipo da aplicação</p>
+                                <img src="img/img.png">
+                                <p class="subtitulo">Ferramentas:</p>
+                                <ul class="lista">
+                                    <li class="lista">Python</li>
+                                    <li class="lista">Flask</li>
+                                    <li class="lista">Web</li>
+                                    <li class="lista">Arduíno</li>
+                                </ul>
+                                <p class="subtitulo">Execução:</p>
+                                <p class="subtitulo">Controle via Bluetooth</p>
+                                <ul>
+                                    <li class="lista">Conectar as baterias</li>
+                                    <li class="lista">Iniciar o servidor Flask</li>
+                                    <li class="lista">Realizar a conexão via Bluetooth</li>
+                                </ul>
+                                <p class="subtitulo">Controle via Feixe de Luz</p>
+                                <ul>
+                                    <li class="lista">Conectar as baterias</li>
+                                    <li class="lista">Ativar o botão para controle</li>
+                                    <p class="obs">Obs: Essa função tem melhor desempenho em ambiente com pouca luminosidade</p>
+                                </ul>
+                            </div>
+                        </div>
+                </section>
+            </div>
+        </main>
+
+        <footer class="page-footer" id="github">
+            <div class="container">
+                <div class="row">
+                <div class="col l8 offset-l2 s12">
+                    <a class="grey-text text-lighten-3 rodape1" href="https://github.com/JoaoPedro150/Veiculo-Segue-Luz">Projeto</a>
+                    <p class="rodape2">Contatos:</p>
+                    <ul class="listaRodape">
+                        <li><a class="grey-text text-lighten-3 rodape" href="https://github.com/JoaoPedro150">João Pedro</a></li>
+                        <li><a class="grey-text text-lighten-3 rodape" href="https://github.com/rafaela">Rafaela Paiva</a></li>
+                        <li><a class="grey-text text-lighten-3 rodape" href="https://github.com/JoaoPedro150">Ramom Giovane</a></li>
+                    </ul>
+                </div>
+                </div>
+            </div>
+        </footer>
+
+        <script src="js/materialize.min.js"></script>
+
+    </body>
+</html>
