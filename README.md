@@ -3,6 +3,10 @@ Trabalho desenvolvido para a disciplina Sistemas Distribuídos do curso superior
 
 Desenvolvido baseado na proposta de um sistema distribuído, o Veículo Segue Luz foi construído utilizando Arduino. Realiza comunicação via bluetooth com o servidor remoto  para controlar o veículo. Também é possível controlar utilizando luz. A luz é captada pelos sensores de luminosidade. Para que não haja batidas, tem o sensor de distância ultrassônico.
 
+<p align="center">
+  <img src="https://raw.githubusercontent.com/JoaoPedro150/Veiculo-Segue-Luz/master/img/diagrama.JPG"/>
+</p>
+
 O protótipo foi construído utilizando:
 * 1 Placa Arduíno Mega 2560;
 * 1 Módulo Bluetooth hc-06;
@@ -20,6 +24,8 @@ Dependências:
 * Flask
 * Web
 * Arduíno
+
+
 
 
 
